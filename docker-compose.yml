@@ -1,0 +1,14 @@
+ldap:
+  build: ldap/.
+  expose:
+    - "389"
+  env_file: ldap/auth.env
+  volumes_from:
+    - ldapstorage
+ldapstorage:
+  build: ldap/.
+  volumes:
+    - /var/lib/ldap
+    - /etc/ldap/init
+    - /etc/ldap/slap.d
+  command: "echo ldap volume container"
