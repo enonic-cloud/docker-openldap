@@ -46,4 +46,6 @@ ldapadd -H ldapi:/// -D $LDAP_ROOT_DN -w $LDAP_ROOT_PWD -f /etc/ldap/init/init2.
 if [[ -f /init/export.ldif ]]
 	then
 	echo "Found /init/export.ldif. Importing..."
+	ldapadd -H ldapi:/// -D $LDAP_ROOT_DN -w $LDAP_ROOT_PWD -f /init/export.ldif
 fi
+

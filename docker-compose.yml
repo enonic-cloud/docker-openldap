@@ -3,6 +3,11 @@ ldap:
   expose:
     - "389"
   env_file: ldap/auth.env
+  labels:
+    io.enonic.backup.enable: "yes"
+    io.enonic.backup.prescripts: "/usr/local/bin/backup-pre.sh"
+    io.enonic.backup.postscripts: "/usr/local/bin/backup-post.sh"
+    io.enonic.backup.data: "/backup"
   volumes_from:
     - ldapstorage
 ldapstorage:
