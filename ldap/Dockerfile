@@ -11,4 +11,4 @@ RUN chmod +x /usr/local/bin/backup-*.sh
 RUN chmod +x /init/*.sh
 
 EXPOSE 389
-CMD /usr/sbin/slapd -h "ldap://$HOSTNAME ldapi:///" -u openldap -g openldap -d 8
+CMD /usr/sbin/slapd -h "ldap://$HOSTNAME ldapi:///" -u openldap -g openldap -d 0
