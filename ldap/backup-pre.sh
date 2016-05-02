@@ -18,4 +18,4 @@ echo "Copying running configuration"
 cp -rf /etc/ldap/init $BACKUP_DIR/running_init
 
 echo "exporting $LDAP_BASE_DN"
-ldapsearch -H ldapi:/// -D $LDAP_AUTH_DN -w $LDAP_AUTH_PWD -z 0 -x -b "$LDAP_BASE_DN"  '(objectclass=*)' > $BACKUP_DIR/export.ldif
+ldapsearch -H ldapi:/// -D $LDAP_ROOT_DN -w $LDAP_ROOT_PWD -z 0 -x -b "$LDAP_BASE_DN"  '(objectclass=*)' > $BACKUP_DIR/export.ldif
