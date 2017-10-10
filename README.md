@@ -27,7 +27,7 @@ You need to set up the following environment variables:
 The following paths can be mounted from volume to preserve state over redeployments
 - /var/lib/ldap
 - /etc/ldap/init
-- /etc/ldap/slap.d
+- /etc/ldap/slapd.d
 
 ## Automatic import at init
 The init script looks for the file "/init/export.ldif". If it finds it, then it will import that ldif file into the ldap store automaticly
